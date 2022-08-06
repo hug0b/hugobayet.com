@@ -12,6 +12,7 @@ body {
   width: 100%;
   height: 100%;
   background-color: var(--color-1);
+  color: var(--highlight-color);
 }
 
 body {
@@ -39,16 +40,20 @@ h1 {
   font-weight: 600;
   font-size: 4em;
 
-  background: linear-gradient(0.25turn, white, var(--highlight-color) 60%);
+  margin-top: 10vh;
+
+  user-select: none;
+}
+
+#main-title {
+  /* background: linear-gradient(0.25turn, #f9d5c2, var(--highlight-color) 60%);
   background-clip: text;
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  margin-top: 10vh;
+  -webkit-text-fill-color: transparent; */
 }
 
 .socials {
-  margin-top: 8vh;
+  margin-top: 5vh;
 }
 
 .socials svg {
@@ -70,7 +75,6 @@ h1 {
   visibility: hidden;
   width: 120px;
   background-color: var(--color-4);
-  color: var(--highlight-color);
 
   font-size: 1.3rem;
   font-weight: bold;
@@ -104,8 +108,78 @@ h1 {
   border-style: solid;
   border-color: var(--color-4) transparent transparent transparent;
 }
+
 /* Show the tooltip text when you mouse over the tooltip container */
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+}
+
+.glitch-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* TEST */
+.glitch {
+  font-weight: 600;
+  font-size: 4em;
+
+  position: relative;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+    0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  transform: translate(-0.04em, -0.03em);
+  opacity: 0.75;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  transform: translate(0.04em, 0.03em);
+  opacity: 0.75;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff,
+      0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff,
+      -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff,
+      0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff,
+      -0.04em -0.025em 0 #fffc00;
+  }
 }

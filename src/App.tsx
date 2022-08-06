@@ -1,6 +1,7 @@
 import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { FaKaggle } from "react-icons/fa";
 import SocialButton from "./components/SocialButton";
+import Title from "./components/Title";
 
 const iconSize = "2rem";
 
@@ -22,7 +23,7 @@ const socials = {
 export function App() {
   return (
     <main>
-      <h1>Hugo Bayet</h1>
+      <Title />
 
       <div className="socials">
         <SocialButton
