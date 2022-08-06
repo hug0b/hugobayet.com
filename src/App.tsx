@@ -20,6 +20,7 @@ const socials = {
   },
 };
 
+// TODO: Use alt text for icons when supported (https://github.com/react-icons/react-icons/issues/584)
 export function App() {
   return (
     <main>
