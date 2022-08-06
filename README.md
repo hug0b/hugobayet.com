@@ -1,4 +1,4 @@
-Personal website
+## Personal website
 
 Run development app: `npm run dev`
 
