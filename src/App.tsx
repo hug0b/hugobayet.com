@@ -2,8 +2,7 @@ import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 import { FaKaggle } from "react-icons/fa";
 import SocialButton from "./components/SocialButton";
 import Title from "./components/Title";
-
-const iconSize = "2rem";
+import { convertRemToPixels } from "./utils/convertRemToPixels";
 
 const socials = {
   github: {
@@ -20,7 +19,8 @@ const socials = {
   },
 };
 
-// TODO: Use alt text for icons when supported (https://github.com/react-icons/react-icons/issues/584)
+const iconSize: number = convertRemToPixels(2);
+
 export function App() {
   return (
     <main>

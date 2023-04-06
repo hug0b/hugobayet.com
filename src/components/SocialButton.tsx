@@ -14,7 +14,7 @@ const SocialButton: FunctionComponent<SocialButtonProps> = ({
   return (
     <Tooltip text={text}>
       <span className="social-icon">
-        <a href={href} target="_blank" rel="noopener noreferrer">
+        <a href={href} target="_blank" rel="noopener noreferrer" aria-label={`Go to my ${text}`}>
           {children}
         </a>
       </span>

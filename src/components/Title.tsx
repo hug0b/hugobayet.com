@@ -3,7 +3,7 @@ import { useState } from "preact/hooks";
 const Title = () => {
   const [magicActive, setMagicActive] = useState(false);
 
-  const onTitleClick = () => {
+  function onTitleClick(): void {
     setMagicActive(true);
     setTimeout(() => {
       setMagicActive(false);
